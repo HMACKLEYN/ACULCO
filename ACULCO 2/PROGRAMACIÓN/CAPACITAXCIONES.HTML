@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPACITACIONES</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #506C2A;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .product {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .product-item {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+
+    .product-item:hover {
+      transform: scale(1.05);
+    }
+
+    .product-item img {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .product-info {
+      padding: 15px;
+      font-size: x-small;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CAPACITACIONES</h1>
+  </header>
+
+  <div class="product">
+    <div class="product-item">
+      <img src="Urban Fashion Img/CAPACITACIONES-01.png" alt="Producto 1">
+      <div class="product-info">
+        <h2>Taller buenas prácticas agrícolas</h2>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="Urban Fashion Img/CAPACITACIONES-02.png" alt="Producto 2">
+      <div class="product-info">
+        <h2>Formación para las instalaciones y mejoras<br>para la adecuación de los terrenos de explotación</h2>
+
+      </div>
+    </div>
+
+    <div class="product-item">
+        <img src="Urban Fashion Img/CAPACITACIONES-03.png" alt="Producto 3">
+        <div class="product-info">
+          <h2>Formación para el uso eficiente <br>del manejo del Pos-cosecha en la ULAV</h2>
+
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="Urban Fashion Img/CAPACITACIONES-04.png" alt="Producto 4">
+        <div class="product-info">
+          <h2>Formación en cadena productiva para <br>el acopio del producto a la granja</h2>
+
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="Urban Fashion Img/CAPACITACIONES-05.png" alt="Producto 4">
+        <div class="product-info">
+          <h2>Formación a mujeres y niños en <br>implementación de propuestas biodegradables</h2>
+
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="Urban Fashion Img/CAPACITACIONES-06.png" alt="Producto 4">
+        <div class="product-info">
+          <h2>Formación y asesoría técnica especializada <br>en procesos de gestión comercial</h2>
+
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="Urban Fashion Img/CAPACITACIONES-07.png" alt="Producto 4">
+        <div class="product-info">
+          <h2>Creación de plataforma digital para la <br>comercialización de los productos de las Upcs</h2>
+
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="Urban Fashion Img/CAPACITACIONES-08.png" alt="Producto 4">
+        <div class="product-info">
+          <h2>Acompañamiento, orientación y guía para la <br>conformación de iniciativas de asociacionismo y redes.</h2>
+
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="Urban Fashion Img/CAPACITACIONES-09.png" alt="Producto 4">
+        <div class="product-info">
+          <h2>Jornada de sensibilización de iguldad de género. </h2>
+
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="Urban Fashion Img/CAPACITACIONES-10.png" alt="Producto 4">
+        <div class="product-info">
+          <h2>Formación en empoderamiento de la mujer campesina </h2>
+
+        </div>
+      </div>
+
+    <!-- Agrega más productos según sea necesario -->
+
+  </div>
+
+  <!-- Ventana flotante para Producto 1 -->
+  <div id="Popup1" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('Popup1')">&times;</span>
+      <h2>Producto 1</h2>
+      <img src="product1.jpg" alt="Producto 1">
+      <p>Descripción detallada del Producto 1.</p>
+    </div>
+  </div>
+
+  <!-- Ventana flotante para Producto 2 -->
+  <div id="Popup2" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('Popup2')">&times;</span>
+      <h2>Producto 2</h2>
+      <img src="product2.jpg" alt="Producto 2">
+      <p>Descripción detallada del Producto 2.</p>
+    </div>
+  </div>
+
+  <!-- Agrega más ventanas flotantes según sea necesario -->
+
+  <script>
+    function openPopup(popupId) {
+      document.getElementById(popupId).style.display = 'block';
+    }
+
+    function closePopup(popupId) {
+      document.getElementById(popupId).style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
